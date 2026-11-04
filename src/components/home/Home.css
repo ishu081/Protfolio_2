@@ -1,0 +1,11 @@
+#home{
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 31, 41);
+} 
+
+
+.image{
+    height: 93vh;
+}
