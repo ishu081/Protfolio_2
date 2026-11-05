@@ -2,11 +2,9 @@
 import React from "react";
 import "./Home.css";
 import me from "../../assets/me-removebg-preview.png";
-import TypingEffect from "react-typing-effect";
 
 
 function Home() {
-  console.log("TypingEffect:", TypingEffect);
 
   return (
     <div id="home">
@@ -18,14 +16,7 @@ function Home() {
 
           <div className="line3">
             WEB DEVELOPER
-            {/* <TypingEffect
-              text={["WEB DEVELOPER", "SOFTWARE DEVELOPER"]}
-              speed={50}
-              eraseSpeed={50}
-              eraseDelay={1000}
-              typingDelay={500}
-              cursor="_"
-            /> */}
+          
           </div>
           <div><button>Hire Me</button></div>
         </div>

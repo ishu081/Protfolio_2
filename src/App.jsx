@@ -3,6 +3,7 @@ import Nav from './components/nav/Nav'
 import {Outlet} from "react-router-dom"
 import Home from './components/home/Home'
 import About from './components/about/About'
+import Project from './components/project/Project'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       <Home/>
       <About/> 
+      <Project />
     </div>
   )
 }
