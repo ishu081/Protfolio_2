@@ -1,31 +1,86 @@
-.project{
+.project {
     width: 100%;
-    height: 50vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 40px
-    
-
+    gap: 30px;
+    box-sizing: border-box;
 }
- h1 {
+
+.project > h1 {
     background: linear-gradient(to right, red, white);
     background-clip: text;
     color: transparent;
     font-size: 40px;
-    gap: 50px;
 }
 
 .scrolling {
     width: 90%;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 150px;
-    gap: 50px;
-
+    grid-auto-columns: 200px;
+    column-gap: 50px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
+    margin-top: 4rem;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .project {
+        min-height: 100vh;
+    }
+
+    .scrolling {
+        width: 85%;
+        grid-auto-columns: 200px;
+        column-gap: 50px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .project {
+        min-height: 80vh;
+    }
+
+    .project > h1 {
+        font-size: 32px;
+    }
+
+    .scrolling {
+        width: 90%;
+        grid-auto-columns: 180px;
+        column-gap: 30px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .project {
+        min-height: auto;
+        padding: 50px 0;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    .project > h1 {
+        font-size: 25px;
+    }
+
+    .scrolling {
+        width: 90%;
+        grid-auto-flow: column;
+        grid-auto-columns: 150px;
+        column-gap: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-top: 20px;
+        padding: 10px 5px;
+    }
 }

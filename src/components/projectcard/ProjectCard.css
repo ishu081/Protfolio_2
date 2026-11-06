@@ -1,0 +1,33 @@
+.box{
+     width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(4, 13, 22);
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 2px 2px 10px black;
+    flex-shrink: 0;
+    gap: 30px;
+
+
+}
+
+.box:hover{
+    box-shadow: 2px 2px 10px rgb(106, 211, 240);
+    filter: drop-shadow(2px 2px 10px black);
+    backdrop-filter: blur(7px);
+    filter: drop-shadow(2px 2px 10px black);
+
+}
+
+.box h1{
+    color: rgba(107, 243, 243, 0.579);
+    font-size: 18px;
+}

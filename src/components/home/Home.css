@@ -27,13 +27,18 @@
     font-size: 1em;
 }
 
-.details button{
+.details button {
     background-color: rgb(84, 214, 219);
-    padding: 10px 30px;
+    padding: 5px 30px;
     border: 2px solid rgb(84, 214, 219);
     border-radius: 2rem;
     font-size: 15px;
     transition: all 0.2s;
+    width: auto;
+    cursor: pointer;
+    margin-top: 15px;
+    margin: 0 0;
+    
 }
 
 .details button:hover{

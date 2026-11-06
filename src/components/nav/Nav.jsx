@@ -1,34 +1,49 @@
+
 import React, { useRef } from 'react'
 import "./Nav.css"
-import {Link} from "react-scroll"
+import { Link } from "react-scroll"
 
 function Nav() {
-  let menu = useRef()
-  let mobile = useRef()
+  const menu = useRef(null)
+  const mobile = useRef(null)
+
+  const closeMobileMenu = () => {
+    mobile.current.classList.remove("activeMobile")
+    menu.current.classList.remove("activeHam")
+  }
+
   return (
     <nav>
-      <h1>PROTFOLIO</h1>
+      <h1>PORTFOLIO</h1>
 
-      <ul className='desktopMenu'>
-        <Link to='home' activeClass='active' smooth={true} duration={500} spy={true}><li>Home</li></Link>
-        <Link to='about' activeClass='active' smooth={true} duration={500} spy={true}><li>About</li></Link>
-        <Link to='project' activeClass='active' smooth={true} duration={500} spy={true}><li>Projects</li></Link>
-        <Link to='contact' activeClass='active' smooth={true} duration={500} spy={true}><li>Contact</li></Link>
+      {/* Desktop Menu */}
+      <ul className="desktopMenu">
+        <li><Link to="home" smooth duration={500} spy offset={-80}>Home</Link></li>
+        <li><Link to="about" smooth duration={500} spy offset={-80}>About</Link></li>
+        <li><Link to="project" smooth duration={500} spy offset={-80}>Projects</Link></li>
+        <li><Link to="contact" smooth duration={500} spy offset={-80}>Contact</Link></li>
       </ul>
 
-      <div className="hamburger" ref={menu} onClick={() => {
+      {/* Hamburger */}
+      <div
+        className="hamburger"
+        ref={menu}
+        onClick={() => {
           mobile.current.classList.toggle("activeMobile")
           menu.current.classList.toggle("activeHam")
-      }}>
+        }}
+      >
         <div className="ham"></div>
         <div className="ham"></div>
         <div className="ham"></div>
       </div>
-      <ul className='mobileMenu' ref={mobile}>
-        <Link to='home' activeClass='active' smooth={true} duration={500} spy={true}><li>Home</li></Link>
-        <Link to='about' activeClass='active' smooth={true} duration={500} spy={true}><li>About</li></Link>
-        <Link to='project' activeClass='active' smooth={true} duration={500} spy={true}><li>Projects</li></Link>
-        <Link to='contact' activeClass='active' smooth={true} duration={500} spy={true}><li>Contact</li></Link>
+
+      {/* Mobile Menu */}
+      <ul className="mobileMenu" ref={mobile}>
+        <li><Link to="home" smooth duration={500} spy offset={-80} onClick={closeMobileMenu}>Home</Link></li>
+        <li><Link to="about" smooth duration={500} spy offset={-80} onClick={closeMobileMenu}>About</Link></li>
+        <li><Link to="project" smooth duration={500} spy offset={-80} onClick={closeMobileMenu}>Projects</Link></li>
+        <li><Link to="contact" smooth duration={500} spy offset={-80} onClick={closeMobileMenu}>Contact</Link></li>
       </ul>
     </nav>
   )
