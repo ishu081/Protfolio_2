@@ -65,8 +65,9 @@
     .project {
         min-height: auto;
         padding: 50px 0;
-        gap: 15px;
+        gap: 43px;
         justify-content: flex-start;
+        width: 165%;
     }
 
     .project > h1 {
@@ -82,5 +83,6 @@
         overflow-y: hidden;
         margin-top: 20px;
         padding: 10px 5px;
+        gap: 80px;
     }
 }
